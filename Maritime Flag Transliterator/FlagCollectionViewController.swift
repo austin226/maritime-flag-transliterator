@@ -8,9 +8,11 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "FlagCell"
 
 class FlagCollectionViewController: UICollectionViewController {
+    
+    var flagImages = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +21,14 @@ class FlagCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        
+        flagImages = ["alpha", "bravo", "charlie", "delta", "echo", "foxtrot",
+                        "golf", "hotel", "india", "juliet", "kilo", "lima", "mike",
+                        "november", "oscar", "papa", "quebec", "romeo", "sierra",
+                        "tango", "uniform", "victor", "whiskey", "xray", "yankee", "zulu"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,19 +50,21 @@ class FlagCollectionViewController: UICollectionViewController {
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return flagImages.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FlagCollectionViewCell
     
         // Configure the cell
+        let image = UIImage(named: flagImages[indexPath.row])
+        cell.imageView.image = image
     
         return cell
     }
