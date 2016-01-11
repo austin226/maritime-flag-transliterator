@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D9B6DAF31C43344300394069 /* Maritime Flag Transliterator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Maritime Flag Transliterator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B6DAF31C43344300394069 /* Flag Translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flag Translator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B6DAF61C43344300394069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9B6DAFB1C43344300394069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B6DAFD1C43344300394069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		D9B6DAF41C43344300394069 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D9B6DAF31C43344300394069 /* Maritime Flag Transliterator.app */,
+				D9B6DAF31C43344300394069 /* Flag Translator.app */,
 				D9B6DB071C43344400394069 /* Maritime Flag TransliteratorTests.xctest */,
 				D9B6DB121C43344400394069 /* Maritime Flag TransliteratorUITests.xctest */,
 			);
@@ -151,7 +151,7 @@
 			);
 			name = "Maritime Flag Transliterator";
 			productName = "Maritime Flag Transliterator";
-			productReference = D9B6DAF31C43344300394069 /* Maritime Flag Transliterator.app */;
+			productReference = D9B6DAF31C43344300394069 /* Flag Translator.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D9B6DB061C43344400394069 /* Maritime Flag TransliteratorTests */ = {
@@ -417,7 +417,7 @@
 				INFOPLIST_FILE = "Maritime Flag Transliterator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aalmond.Maritime-Flag-Transliterator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Flag Translator";
 			};
 			name = Debug;
 		};
@@ -428,7 +428,7 @@
 				INFOPLIST_FILE = "Maritime Flag Transliterator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aalmond.Maritime-Flag-Transliterator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Flag Translator";
 			};
 			name = Release;
 		};

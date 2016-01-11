@@ -68,6 +68,24 @@ class FlagCollectionViewController: UICollectionViewController {
     
         return cell
     }
+    
+    override func collectionView(collectionView: UICollectionView,
+        viewForSupplementaryElementOfKind kind: String,
+        atIndexPath indexPath: NSIndexPath)
+        -> UICollectionReusableView {
+            
+            var header: HeaderView?
+            
+            if kind == UICollectionElementKindSectionHeader {
+                header =
+                    collectionView.dequeueReusableSupplementaryViewOfKind(kind,
+                        withReuseIdentifier: "ViewHeader", forIndexPath: indexPath)
+                    as? HeaderView
+                
+                header?.headerLabel.text = "Maritime Flag Transliterator"
+            }
+            return header!
+    }
 
     // MARK: UICollectionViewDelegate
 
