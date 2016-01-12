@@ -56,15 +56,8 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-8P-lrN">
-                                    <rect key="frame" x="471" y="161" width="36" height="30"/>
-                                    <state key="normal" title="Clear"/>
-                                    <connections>
-                                        <action selector="clearButton:" destination="OfJ-NY-bke" eventType="touchUpInside" id="xtO-E0-8Lg"/>
-                                    </connections>
-                                </button>
                                 <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text will appear here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-zj-2Dc">
-                                    <rect key="frame" x="8" y="165" width="450" height="22"/>
+                                    <rect key="frame" x="8" y="165" width="300" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="3St-au-FCa"/>
                                     </constraints>
@@ -76,22 +69,42 @@
                                         </mask>
                                     </variation>
                                 </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rok-vl-EY6">
+                                    <rect key="frame" x="319" y="161" width="45" height="30"/>
+                                    <state key="normal" title="Delete"/>
+                                    <connections>
+                                        <action selector="deleteButton:" destination="OfJ-NY-bke" eventType="touchUpInside" id="nKt-Gm-pgq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-8P-lrN">
+                                    <rect key="frame" x="372" y="161" width="36" height="30"/>
+                                    <state key="normal" title="Clear"/>
+                                    <connections>
+                                        <action selector="clearButton:" destination="OfJ-NY-bke" eventType="touchUpInside" id="xtO-E0-8Lg"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="X5g-Zm-hFJ" firstAttribute="centerY" secondItem="OfJ-NY-bke" secondAttribute="centerY" id="01A-NJ-dBD"/>
                                 <constraint firstAttribute="leadingMargin" secondItem="4Wd-zj-2Dc" secondAttribute="leading" id="6tH-2y-e0X"/>
+                                <constraint firstItem="rok-vl-EY6" firstAttribute="centerY" secondItem="4Wd-zj-2Dc" secondAttribute="centerY" id="KqB-w8-eec"/>
                                 <constraint firstItem="kfe-8P-lrN" firstAttribute="centerY" secondItem="4Wd-zj-2Dc" secondAttribute="centerY" id="Myh-6u-7gb"/>
+                                <constraint firstItem="kfe-8P-lrN" firstAttribute="centerY" secondItem="rok-vl-EY6" secondAttribute="centerY" id="Pj3-ch-MmF"/>
                                 <constraint firstItem="kfe-8P-lrN" firstAttribute="leading" secondItem="4Wd-zj-2Dc" secondAttribute="trailing" constant="13" id="VIu-zf-CMC"/>
                                 <constraint firstItem="4Wd-zj-2Dc" firstAttribute="centerX" secondItem="OfJ-NY-bke" secondAttribute="centerX" id="W6p-bO-Xdt"/>
                                 <constraint firstItem="X5g-Zm-hFJ" firstAttribute="top" secondItem="OfJ-NY-bke" secondAttribute="topMargin" constant="25" id="agv-hG-ble"/>
-                                <constraint firstItem="4Wd-zj-2Dc" firstAttribute="width" secondItem="OfJ-NY-bke" secondAttribute="width" multiplier="0.75" id="c6h-Mw-d2H"/>
+                                <constraint firstItem="4Wd-zj-2Dc" firstAttribute="width" secondItem="OfJ-NY-bke" secondAttribute="width" multiplier="0.5" id="c6h-Mw-d2H"/>
+                                <constraint firstItem="kfe-8P-lrN" firstAttribute="leading" secondItem="rok-vl-EY6" secondAttribute="trailing" constant="8" id="hda-Sv-glH"/>
                                 <constraint firstItem="X5g-Zm-hFJ" firstAttribute="centerX" secondItem="OfJ-NY-bke" secondAttribute="centerX" id="hyK-eD-3EL"/>
                                 <constraint firstAttribute="bottomMargin" secondItem="4Wd-zj-2Dc" secondAttribute="bottom" constant="15" id="muf-Zz-CJI"/>
+                                <constraint firstItem="rok-vl-EY6" firstAttribute="leading" secondItem="4Wd-zj-2Dc" secondAttribute="trailing" constant="11" id="wGW-bW-HZn"/>
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="W6p-bO-Xdt"/>
                                     <exclude reference="01A-NJ-dBD"/>
+                                    <exclude reference="Myh-6u-7gb"/>
+                                    <exclude reference="VIu-zf-CMC"/>
                                 </mask>
                             </variation>
                             <connections>

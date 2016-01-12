@@ -16,4 +16,12 @@ class HeaderView: UICollectionReusableView {
     @IBAction func clearButton(sender: AnyObject) {
         flagTextField.text = ""
     }
+    
+    @IBAction func deleteButton(sender: AnyObject) {
+        if flagTextField.text?.characters.count == 0 {
+            return
+        } else {
+            flagTextField.text?.removeAtIndex(flagTextField.text!.endIndex.predecessor())
+        }
+    }
 }
