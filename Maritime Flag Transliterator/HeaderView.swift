@@ -12,4 +12,8 @@ class HeaderView: UICollectionReusableView {
     
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var flagTextField: UITextField!
+    
+    @IBAction func clearButton(sender: AnyObject) {
+        flagTextField.text = ""
+    }
 }

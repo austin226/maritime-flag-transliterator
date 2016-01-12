@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Flag Collection View Controller-->
@@ -16,13 +17,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OYs-7d-5hG">
                             <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="50" height="134"/>
+                            <size key="headerReferenceSize" width="50" height="210"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlagCell" id="gkh-G6-Eeo" customClass="FlagCollectionViewCell" customModule="Flag_Translator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="134" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="210" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -46,21 +47,28 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ViewHeader" id="OfJ-NY-bke" customClass="HeaderView" customModule="Flag_Translator" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="134"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="210"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5g-Zm-hFJ">
-                                    <rect key="frame" x="233" y="21" width="134" height="20.5"/>
+                                    <rect key="frame" x="233" y="33" width="134" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-zj-2Dc">
-                                    <rect key="frame" x="0.0" y="96" width="600" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-8P-lrN">
+                                    <rect key="frame" x="471" y="161" width="36" height="30"/>
+                                    <state key="normal" title="Clear"/>
+                                    <connections>
+                                        <action selector="clearButton:" destination="OfJ-NY-bke" eventType="touchUpInside" id="xtO-E0-8Lg"/>
+                                    </connections>
+                                </button>
+                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text will appear here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-zj-2Dc">
+                                    <rect key="frame" x="8" y="165" width="450" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="3St-au-FCa"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <variation key="default">
                                         <mask key="constraints">
@@ -71,14 +79,18 @@
                             </subviews>
                             <constraints>
                                 <constraint firstItem="X5g-Zm-hFJ" firstAttribute="centerY" secondItem="OfJ-NY-bke" secondAttribute="centerY" id="01A-NJ-dBD"/>
+                                <constraint firstAttribute="leadingMargin" secondItem="4Wd-zj-2Dc" secondAttribute="leading" id="6tH-2y-e0X"/>
+                                <constraint firstItem="kfe-8P-lrN" firstAttribute="centerY" secondItem="4Wd-zj-2Dc" secondAttribute="centerY" id="Myh-6u-7gb"/>
+                                <constraint firstItem="kfe-8P-lrN" firstAttribute="leading" secondItem="4Wd-zj-2Dc" secondAttribute="trailing" constant="13" id="VIu-zf-CMC"/>
                                 <constraint firstItem="4Wd-zj-2Dc" firstAttribute="centerX" secondItem="OfJ-NY-bke" secondAttribute="centerX" id="W6p-bO-Xdt"/>
-                                <constraint firstItem="X5g-Zm-hFJ" firstAttribute="top" secondItem="OfJ-NY-bke" secondAttribute="topMargin" constant="13" id="agv-hG-ble"/>
-                                <constraint firstItem="4Wd-zj-2Dc" firstAttribute="width" secondItem="OfJ-NY-bke" secondAttribute="width" id="c6h-Mw-d2H"/>
+                                <constraint firstItem="X5g-Zm-hFJ" firstAttribute="top" secondItem="OfJ-NY-bke" secondAttribute="topMargin" constant="25" id="agv-hG-ble"/>
+                                <constraint firstItem="4Wd-zj-2Dc" firstAttribute="width" secondItem="OfJ-NY-bke" secondAttribute="width" multiplier="0.75" id="c6h-Mw-d2H"/>
                                 <constraint firstItem="X5g-Zm-hFJ" firstAttribute="centerX" secondItem="OfJ-NY-bke" secondAttribute="centerX" id="hyK-eD-3EL"/>
-                                <constraint firstAttribute="bottomMargin" secondItem="4Wd-zj-2Dc" secondAttribute="bottom" id="muf-Zz-CJI"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="4Wd-zj-2Dc" secondAttribute="bottom" constant="15" id="muf-Zz-CJI"/>
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
+                                    <exclude reference="W6p-bO-Xdt"/>
                                     <exclude reference="01A-NJ-dBD"/>
                                 </mask>
                             </variation>

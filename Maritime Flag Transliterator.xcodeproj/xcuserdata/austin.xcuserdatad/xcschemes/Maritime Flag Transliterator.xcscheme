@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D9B6DAF21C43344300394069"
-               BuildableName = "Maritime Flag Transliterator.app"
+               BuildableName = "Flag Translator.app"
                BlueprintName = "Maritime Flag Transliterator"
                ReferencedContainer = "container:Maritime Flag Transliterator.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D9B6DAF21C43344300394069"
-            BuildableName = "Maritime Flag Transliterator.app"
+            BuildableName = "Flag Translator.app"
             BlueprintName = "Maritime Flag Transliterator"
             ReferencedContainer = "container:Maritime Flag Transliterator.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D9B6DAF21C43344300394069"
-            BuildableName = "Maritime Flag Transliterator.app"
+            BuildableName = "Flag Translator.app"
             BlueprintName = "Maritime Flag Transliterator"
             ReferencedContainer = "container:Maritime Flag Transliterator.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D9B6DAF21C43344300394069"
-            BuildableName = "Maritime Flag Transliterator.app"
+            BuildableName = "Flag Translator.app"
             BlueprintName = "Maritime Flag Transliterator"
             ReferencedContainer = "container:Maritime Flag Transliterator.xcodeproj">
          </BuildableReference>
