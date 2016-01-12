@@ -13,6 +13,7 @@ private let reuseIdentifier = "FlagCell"
 class FlagCollectionViewController: UICollectionViewController {
     
     var flagImages = [String]()
+    var flagTextField: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,8 @@ class FlagCollectionViewController: UICollectionViewController {
                         "golf", "hotel", "india", "juliet", "kilo", "lima", "mike",
                         "november", "oscar", "papa", "quebec", "romeo", "sierra",
                         "tango", "uniform", "victor", "whiskey", "xray", "yankee", "zulu"]
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,10 +66,23 @@ class FlagCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FlagCollectionViewCell
     
         // Configure the cell
-        let image = UIImage(named: flagImages[indexPath.row])
+        let flagName = flagImages[indexPath.row]
+        let image = UIImage(named: flagName)
         cell.imageView.image = image
+        
+        let initialChar = String(flagName[flagName.startIndex]).uppercaseString
+        let tapGestureRecognizer = FlagTapGestureRecognizer(target: self, action: Selector("imageTapped:"), output: initialChar)
+        
+        cell.imageView.userInteractionEnabled = true
+        cell.imageView.addGestureRecognizer(tapGestureRecognizer)
     
         return cell
+    }
+    
+    func imageTapped(img: AnyObject) {
+        if let flag_output = (img as! FlagTapGestureRecognizer).output {
+            flagTextField!.text = flagTextField!.text?.stringByAppendingString(flag_output)
+        }
     }
     
     override func collectionView(collectionView: UICollectionView,
@@ -83,6 +99,7 @@ class FlagCollectionViewController: UICollectionViewController {
                     as? HeaderView
                 
                 header?.headerLabel.text = "Maritime Flag Transliterator"
+                flagTextField = header?.flagTextField
             }
             return header!
     }

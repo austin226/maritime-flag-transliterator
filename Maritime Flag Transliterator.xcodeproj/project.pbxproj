@@ -17,6 +17,7 @@
 		D9B6DB2B1C44304600394069 /* FlagCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6DB2A1C44304600394069 /* FlagCollectionViewController.swift */; };
 		D9B6DB2D1C44308000394069 /* FlagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6DB2C1C44308000394069 /* FlagCollectionViewCell.swift */; };
 		D9B6DB2F1C44485F00394069 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6DB2E1C44485F00394069 /* HeaderView.swift */; };
+		D9B6DB331C445E6B00394069 /* FlagTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6DB321C445E6B00394069 /* FlagTapGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D9B6DB2A1C44304600394069 /* FlagCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagCollectionViewController.swift; sourceTree = "<group>"; };
 		D9B6DB2C1C44308000394069 /* FlagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9B6DB2E1C44485F00394069 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		D9B6DB321C445E6B00394069 /* FlagTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagTapGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		D9B6DAF51C43344300394069 /* Maritime Flag Transliterator */ = {
 			isa = PBXGroup;
 			children = (
+				D9B6DB321C445E6B00394069 /* FlagTapGestureRecognizer.swift */,
 				D9B6DB2A1C44304600394069 /* FlagCollectionViewController.swift */,
 				D9B6DAF61C43344300394069 /* AppDelegate.swift */,
 				D9B6DAFA1C43344300394069 /* Main.storyboard */,
@@ -272,6 +275,7 @@
 				D9B6DB2B1C44304600394069 /* FlagCollectionViewController.swift in Sources */,
 				D9B6DB2D1C44308000394069 /* FlagCollectionViewCell.swift in Sources */,
 				D9B6DAF71C43344300394069 /* AppDelegate.swift in Sources */,
+				D9B6DB331C445E6B00394069 /* FlagTapGestureRecognizer.swift in Sources */,
 				D9B6DB2F1C44485F00394069 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

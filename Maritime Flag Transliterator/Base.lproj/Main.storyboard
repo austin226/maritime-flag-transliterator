@@ -9,7 +9,7 @@
         <!--Flag Collection View Controller-->
         <scene sceneID="F1Q-9z-Iue">
             <objects>
-                <collectionViewController id="IOc-6Y-UkG" customClass="FlagCollectionViewController" customModule="Maritime_Flag_Transliterator" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="IOc-6Y-UkG" customClass="FlagCollectionViewController" customModule="Flag_Translator" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JA9-O8-RBj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,12 +20,8 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7yr-mP-fa0">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlagCell" id="gkh-G6-Eeo" customClass="FlagCollectionViewCell" customModule="Maritime_Flag_Transliterator" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlagCell" id="gkh-G6-Eeo" customClass="FlagCollectionViewCell" customModule="Flag_Translator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="134" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -49,7 +45,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ViewHeader" id="OfJ-NY-bke" customClass="HeaderView" customModule="Maritime_Flag_Transliterator" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ViewHeader" id="OfJ-NY-bke" customClass="HeaderView" customModule="Flag_Translator" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="134"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -60,30 +56,24 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-zj-2Dc">
-                                    <rect key="frame" x="240" y="96" width="119.5" height="30"/>
+                                    <rect key="frame" x="0.0" y="96" width="600" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="3St-au-FCa"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arh-gU-ugO">
-                                    <rect key="frame" x="368" y="96" width="59" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="46" id="TgB-dT-WqZ"/>
-                                    </constraints>
-                                    <state key="normal" title="Convert!"/>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="TgB-dT-WqZ"/>
+                                            <exclude reference="3St-au-FCa"/>
                                         </mask>
                                     </variation>
-                                </button>
+                                </textField>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="X5g-Zm-hFJ" firstAttribute="centerY" secondItem="OfJ-NY-bke" secondAttribute="centerY" id="01A-NJ-dBD"/>
-                                <constraint firstItem="Arh-gU-ugO" firstAttribute="leading" secondItem="4Wd-zj-2Dc" secondAttribute="trailing" constant="8" id="T5y-u0-Ww3"/>
                                 <constraint firstItem="4Wd-zj-2Dc" firstAttribute="centerX" secondItem="OfJ-NY-bke" secondAttribute="centerX" id="W6p-bO-Xdt"/>
                                 <constraint firstItem="X5g-Zm-hFJ" firstAttribute="top" secondItem="OfJ-NY-bke" secondAttribute="topMargin" constant="13" id="agv-hG-ble"/>
-                                <constraint firstItem="Arh-gU-ugO" firstAttribute="centerY" secondItem="4Wd-zj-2Dc" secondAttribute="centerY" id="be8-CP-eh9"/>
-                                <constraint firstItem="Arh-gU-ugO" firstAttribute="leading" secondItem="4Wd-zj-2Dc" secondAttribute="trailing" constant="8" id="fYo-9z-5ln"/>
+                                <constraint firstItem="4Wd-zj-2Dc" firstAttribute="width" secondItem="OfJ-NY-bke" secondAttribute="width" id="c6h-Mw-d2H"/>
                                 <constraint firstItem="X5g-Zm-hFJ" firstAttribute="centerX" secondItem="OfJ-NY-bke" secondAttribute="centerX" id="hyK-eD-3EL"/>
                                 <constraint firstAttribute="bottomMargin" secondItem="4Wd-zj-2Dc" secondAttribute="bottom" id="muf-Zz-CJI"/>
                             </constraints>
@@ -93,6 +83,7 @@
                                 </mask>
                             </variation>
                             <connections>
+                                <outlet property="flagTextField" destination="4Wd-zj-2Dc" id="3eQ-fn-UqM"/>
                                 <outlet property="headerLabel" destination="X5g-Zm-hFJ" id="fuR-eT-L0X"/>
                             </connections>
                         </collectionReusableView>
